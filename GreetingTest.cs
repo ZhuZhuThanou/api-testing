@@ -8,13 +8,16 @@ namespace api_testing
 {
     public class GreetingTest
     {
-        string URL = "https://zoomworld.azurewebsites.net/api/zoomworld20?code=ake7hRhu8e4hGNKzIQmJ45q6PA5E3kL520QKRD4PZamTQRYhktYK9w==&name=Bob";
+        TestEndpoints testEndpoints = new TestEndpoints();
+
+   
         HttpClient apiClient = new HttpClient();
         [Fact]
-        public async Task TestGreetingApi()
+        public async Task TestGreetingApi_withBob()
         {
             try
             {
+                string URL = testEndpoints.baseUrl + "?" + testEndpoints.apiKey + "&name=Bob";
                 HttpResponseMessage response = await apiClient.GetAsync(URL);
                 string responseBody = await response.Content.ReadAsStringAsync();
                 Greeting greeting = JsonSerializer.Deserialize<Greeting>(responseBody);

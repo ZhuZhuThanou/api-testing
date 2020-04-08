@@ -1,14 +1,17 @@
 ﻿<Properties StartupConfiguration="{186D6222-4621-4C35-A805-199E6CC601A4}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="GreetingTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TestEndpoints.cs">
     <Files>
-      <File FileName="GreetingTest.cs" Line="1" Column="1" />
+      <File FileName="GreetingTest.cs" Line="22" Column="42" />
+      <File FileName="azure-pipelines.yml" Line="31" Column="1" />
+      <File FileName="TestEndpoints.cs" Line="10" Column="25" />
+      <File FileName="Greeting.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="api-testing" expanded="True">
             <Node name="api-testing" expanded="True">
-              <Node name="GreetingTest.cs" selected="True" />
+              <Node name="TestEndpoints.cs" selected="True" />
             </Node>
           </Node>
         </State>
