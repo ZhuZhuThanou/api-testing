@@ -28,7 +28,13 @@ steps:
     msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      export baseURL="https://zoomworld.azurewebsites.net/api/zoomworld20"
+      export apiKey="code=ake7hRhu8e4hGNKzIQmJ45q6PA5E3kL520QKRD4PZamTQRYhktYK9w=="
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
