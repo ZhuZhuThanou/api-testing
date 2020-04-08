@@ -17,7 +17,7 @@ namespace api_testing
         {
             try
             {
-                string URL = testEndpoints.baseUrl + "?" + testEndpoints.apiKey + "&name=Bob";
+                string URL = testEndpoints.baseUrl + "?code=" + testEndpoints.apiKey + "&name=Bob";
                 HttpResponseMessage response = await apiClient.GetAsync(URL);
                 string responseBody = await response.Content.ReadAsStringAsync();
                 Greeting greeting = JsonSerializer.Deserialize<Greeting>(responseBody);
