@@ -19,7 +19,7 @@ namespace api_testing
                 string responseBody = await response.Content.ReadAsStringAsync();
                 Greeting greeting = JsonSerializer.Deserialize<Greeting>(responseBody);
                 Assert.Equal("Bob", greeting.name);
-                Assert.Equal("Hello there x", greeting.message);
+                Assert.Equal("Hello there", greeting.message);
             }
             catch (HttpRequestException ex)
             {
