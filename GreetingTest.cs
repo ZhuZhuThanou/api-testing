@@ -14,6 +14,7 @@ namespace api_testing
 
         public GreetingTest(IntegrationTestFixture fixture)
         {
+            // common items for each test to us should come from the fixture
             testEndpoints = fixture.testEndpoints;
             apiClient = fixture.apiClient;
         }
@@ -23,6 +24,9 @@ namespace api_testing
         {
             try
             {
+                // Commnet: This test uses JsonSerializer. Another path is to use a more
+                // dynamic serializer so that test does not reference a concrete class. In the test,
+                // it deserializes JSON data to Greeting class
                 string URL = testEndpoints.baseUrl + "?code=" + testEndpoints.apiKey + "&name=Bob";
                 HttpResponseMessage response = await apiClient.GetAsync(URL);
                 string responseBody = await response.Content.ReadAsStringAsync();
