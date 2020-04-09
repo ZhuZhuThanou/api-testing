@@ -3,9 +3,9 @@
 ## Technology
 C# • .Net 3.0 • XUnit testing framework
  
-## Key classes to consider
+## Key classes and file to consider
 
-| Classes                       | Description                                    | 
+| Class/File                    | Description                                    | 
 |-------------------------------|------------------------------------------------|
 | IntegrationTestFixtures.cs    | This file contains shared resources that each test class would use such as HttpClient object. If you have additional reosurces with this charactristic, add them here.|        
 | TestEndpoints.cs              | This file contains variables such as URL and API credential information that change depending on environments |
