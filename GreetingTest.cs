@@ -6,12 +6,18 @@ using Xunit;
 
 namespace api_testing
 {
-    public class GreetingTest
+    public class GreetingTest : IClassFixture<IntegrationTestFixture>
     {
-        TestEndpoints testEndpoints = new TestEndpoints();
 
-   
-        HttpClient apiClient = new HttpClient();
+        TestEndpoints testEndpoints;
+        HttpClient apiClient;
+
+        public GreetingTest(IntegrationTestFixture fixture)
+        {
+            testEndpoints = fixture.testEndpoints;
+            apiClient = fixture.apiClient;
+        }
+        
         [Fact]
         public async Task TestGreetingApi_withBob()
         {
