@@ -1,7 +1,7 @@
 # API-Testing
 
 ## Technology
-C# • .Net 3.0 • XUnit testing framework
+C# • .Net Core 3.0 • XUnit testing framework
  
 ## Key classes and file to consider
 
