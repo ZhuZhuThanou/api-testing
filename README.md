@@ -1,7 +1,8 @@
 #API-Testing
 
 ## Technology
-This sample 
+C# • .Net 3.0 • XUnit testing framework
+ 
 ## Key classes to consider
 
 | Classes                       | Description                                    | 
